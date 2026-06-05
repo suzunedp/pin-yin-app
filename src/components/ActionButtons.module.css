@@ -1,0 +1,36 @@
+.row {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+}
+
+.secondary,
+.primary {
+  flex: 1;
+  font-family: 'Noto Sans SC', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  padding: 17px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: opacity 0.15s;
+}
+
+.secondary:disabled,
+.primary:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.secondary {
+  background: var(--bg-surface);
+  border: 0.5px solid var(--border-default);
+  color: var(--text-secondary);
+}
+
+.primary {
+  background: var(--btn-primary-bg);
+  border: none;
+  color: var(--btn-primary-text);
+}

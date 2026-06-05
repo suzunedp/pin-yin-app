@@ -1,0 +1,29 @@
+:root {
+  --bg-hero: #DDE4EA;
+  --bg-overlay: #D0DCE4;
+  --bg-surface: rgba(255, 255, 255, 0.8);
+  --text-primary: #1A2E3A;
+  --text-secondary: #5A7888;
+  --text-muted: #7A9AAA;
+  --border-default: #B8C4CC;
+  --btn-primary-bg: rgba(46, 76, 94, 0.9);
+  --btn-primary-text: #DDE4EA;
+  --gradient-fade-end: #EDF0F2;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  font-family: 'Noto Sans SC', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--bg-hero);
+  overflow-x: hidden;
+}
