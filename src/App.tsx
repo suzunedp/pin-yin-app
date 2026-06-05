@@ -1,5 +1,6 @@
 import { useState, useCallback, useMemo } from 'react'
 import { pinyin } from 'pinyin-pro'
+import bgImage from '../public/sumi-landscape.jpeg'
 import InputArea from './components/InputArea'
 import OutputArea from './components/OutputArea'
 import ActionButtons from './components/ActionButtons'
@@ -34,7 +35,7 @@ export default function App() {
   return (
     <div className={styles.root}>
       <img
-        src="/sumi-landscape.jpeg"
+        src={bgImage}
         alt=""
         className={styles.bg}
         aria-hidden="true"
