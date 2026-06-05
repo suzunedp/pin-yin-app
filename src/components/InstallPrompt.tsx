@@ -24,7 +24,7 @@ export default function InstallPrompt({ deferredPrompt, onDismiss }: Props) {
   const dismiss = () => {
     localStorage.setItem('install-prompt-dismissed', 'true')
     setVisible(false)
-    setTimeout(onDismiss, 420)
+    setTimeout(onDismiss, 800)
   }
 
   const handleAdd = async () => {
@@ -56,7 +56,7 @@ export default function InstallPrompt({ deferredPrompt, onDismiss }: Props) {
               <div className={styles.stepNum}>
                 <span className={styles.stepNumText}>1</span>
               </div>
-              <span className={styles.stepText}>Safariの下部にある共有ボタン（□↑）をタップ</span>
+              <span className={styles.stepText}>Safariの下部にある共有ボタン（<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" style={{verticalAlign: 'middle'}}><path d="M12,1L8,5H11V14H13V5H16M18,23H6C4.89,23 4,22.1 4,21V9A2,2 0 0,1 6,7H9V9H6V21H18V9H15V7H18A2,2 0 0,1 20,9V21A2,2 0 0,1 18,23Z" /></svg>）をタップ</span>
             </div>
             <div className={styles.stepRow}>
               <div className={styles.stepNum}>
