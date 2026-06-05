@@ -36,30 +36,43 @@ export default function InstallPrompt({ deferredPrompt, onDismiss }: Props) {
   }
 
   return (
-    <div className={`${styles.card} ${visible ? styles.visible : ''}`}>
-      <h2 className={styles.title}>ホーム画面に追加</h2>
-      <p className={styles.body}>
-        アプリとしてホーム画面に追加すると、すばやく起動できます。
-      </p>
+    <div className={`${styles.dialog} ${visible ? styles.visible : ''}`}>
+      <div className={styles.contentRow}>
+        <div className={styles.appIcon}>
+          <span className={styles.appIconText}>拼</span>
+        </div>
+        <div className={styles.textGroup}>
+          <p className={styles.title}>ホーム画面に追加</p>
+          <p className={styles.description}>
+            アプリをホーム画面に追加すると、いつでも素早くアクセスできます
+          </p>
+        </div>
+      </div>
 
       {isIOS ? (
         <>
-          <ol className={styles.steps}>
-            <li className={styles.step}>
-              <span className={styles.stepNum}>1</span>
-              <span>Safariの下部にある共有ボタン（□↑）をタップ</span>
-            </li>
-            <li className={styles.step}>
-              <span className={styles.stepNum}>2</span>
-              <span>「ホーム画面に追加」を選択</span>
-            </li>
-          </ol>
-          <button className={styles.btnClose} onClick={dismiss}>閉じる</button>
+          <div className={styles.stepsSection}>
+            <div className={styles.stepRow}>
+              <div className={styles.stepNum}>
+                <span className={styles.stepNumText}>1</span>
+              </div>
+              <span className={styles.stepText}>Safariの下部にある共有ボタン（□↑）をタップ</span>
+            </div>
+            <div className={styles.stepRow}>
+              <div className={styles.stepNum}>
+                <span className={styles.stepNumText}>2</span>
+              </div>
+              <span className={styles.stepText}>「ホーム画面に追加」を選択</span>
+            </div>
+          </div>
+          <div className={styles.buttonSection}>
+            <button className={styles.btnClose} onClick={dismiss}>閉じる</button>
+          </div>
         </>
       ) : (
-        <div className={styles.actions}>
-          <button className={styles.btnPrimary} onClick={handleAdd}>追加する</button>
-          <button className={styles.btnText} onClick={dismiss}>今はしない</button>
+        <div className={styles.buttonSection}>
+          <button className={styles.btnInstall} onClick={handleAdd}>ホーム画面に追加</button>
+          <button className={styles.btnDismiss} onClick={dismiss}>後で</button>
         </div>
       )}
     </div>
